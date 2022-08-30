@@ -1,1 +1,1 @@
-web: node dhx-gantt-app.js
+web: node server.js
