@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: true }));
  
 app.listen(process.env.PORT || port, () =>{
-    console.log("Server is running on port "+port+"...");
+    console.log("Server is running on port "+process.env.PORT+"...");
 });
  
 const Promise = require('bluebird');
