@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="/bwip-js/dist/bwip-js-min.js"></script>
+  <style type="text/css">
+
+    html, body{
+      height:100%;
+      padding:0px;
+      margin:0px;
+      overflow: hidden;
+    }
+
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    $( document ).ready(function() {
+      let canvas = bwipjs.toCanvas('mycanvas', {
+                bcid:        'code128',       // Barcode type
+                text:        '01234',    // Text to encode
+                scale:       3,               // 3x scaling factor
+                height:      10,              // Bar height, in millimeters
+                includetext: true,            // Show human-readable text
+                textxalign:  'center',        // Always good to set this
+            });
+    });
+
+        
+    
+
+  </script>
+  <canvas id="mycanvas" width="200" height="100" style="border:1px solid #000000;">
+  </canvas> 
+</body>

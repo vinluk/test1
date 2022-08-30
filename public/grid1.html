@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How to Start with dhtmlxGrid</title>         
+        <script type="text/javascript" src="/js/grid.js"></script>
+        <link rel="stylesheet" href="/js/grid.css">
+    </head>
+    <body>
+        <div style="height:500px; width:600px" id="grid_container"></div>
+        <script>
+			// creating dhtmlxGrid 
+            var grid = new dhx.Grid("grid_container", {
+                columns: [
+                    { width: 100, id: "id", header: [{ text: "#" }] },
+                    { width: 100, id: "text", header: [{ text: "Title" }] },
+                    { width: 200, id: "start_time", header: [{ text: "Name" }] },
+                    { width: 200, id: "duration", header: [{ text: "Address" }] }
+                ],
+                headerRowHeight: 50,
+                
+            });
+			
+			grid.data.load('/tasks', 'json');
+        </script>
+    </body>
+</html>
